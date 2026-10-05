@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="nonebot-web-panel hand-drawn banner">
+  <defs>
+    <filter id="r" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="21" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="r2" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="p"/>
+      <feColorMatrix in="p" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    </filter>
+    <style><![CDATA[
+      .draw { stroke-dasharray: 1100; stroke-dashoffset: 1100; animation: draw 8s ease-in-out infinite; }
+      @keyframes draw { 0%{stroke-dashoffset:1100} 22%{stroke-dashoffset:0} 82%{stroke-dashoffset:0} 100%{stroke-dashoffset:1100} }
+    ]]></style>
+  </defs>
+
+  <rect width="1200" height="340" fill="#fbf7ee"/>
+  <rect width="1200" height="340" filter="url(#paper)"/>
+
+  <path d="M26 20 C 320 10, 880 28, 1174 16 C 1182 120, 1176 226, 1172 320 C 880 330, 320 312, 30 324 C 18 214, 30 112, 26 20 Z"
+        fill="none" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round" filter="url(#r)"/>
+
+  <text x="66" y="146" font-family="'Comic Sans MS','Segoe Print',cursive" font-size="76" font-weight="bold" fill="#1f1f1f" filter="url(#r2)">nonebot-web-panel</text>
+  <path class="draw" d="M70 176 q 70 -14 140 0 t 140 0 t 140 0 t 110 0" fill="none" stroke="#e07b39" stroke-width="7" stroke-linecap="round" filter="url(#r2)"/>
+  <text x="72" y="224" font-family="'Comic Sans MS','Segoe Print',cursive" font-size="25" fill="#3a3a3a" filter="url(#r2)">给机器人一个随手可管的控制面板</text>
+
+  <g font-family="'Comic Sans MS','Segoe Print',cursive" font-size="18" fill="#2b2b2b">
+    <g filter="url(#r2)">
+      <rect x="74" y="252" width="170" height="44" rx="18" fill="#e5f0dd" stroke="#2b2b2b" stroke-width="2.2"/>
+      <text x="159" y="280" text-anchor="middle">状态监控</text>
+    </g>
+    <g filter="url(#r2)">
+      <rect x="264" y="252" width="170" height="44" rx="18" fill="#dceaf6" stroke="#2b2b2b" stroke-width="2.2"/>
+      <text x="349" y="280" text-anchor="middle">模型切换</text>
+    </g>
+    <g filter="url(#r2)">
+      <rect x="454" y="252" width="170" height="44" rx="18" fill="#fde8cf" stroke="#2b2b2b" stroke-width="2.2"/>
+      <text x="539" y="280" text-anchor="middle">按群人设</text>
+    </g>
+  </g>
+
+  <!-- browser doodle -->
+  <g filter="url(#r)" stroke="#2b2b2b" stroke-width="2.4" fill="none">
+    <rect x="880" y="56" width="248" height="150" rx="12" fill="#ffffff"/>
+    <line x1="880" y1="90" x2="1128" y2="90"/>
+    <circle cx="902" cy="73" r="4.5" fill="#2b2b2b" stroke="none"/>
+    <circle cx="920" cy="73" r="4.5" fill="#2b2b2b" stroke="none"/>
+    <circle cx="938" cy="73" r="4.5" fill="#2b2b2b" stroke="none"/>
+    <rect x="902" y="108" width="98" height="36" rx="6" fill="#e5f0dd"/>
+    <rect x="1016" y="108" width="94" height="36" rx="6" fill="#dceaf6"/>
+    <rect x="902" y="156" width="208" height="30" rx="6" fill="#f3efe4"/>
+  </g>
+  <text x="1004" y="240" text-anchor="middle" font-family="'Comic Sans MS','Segoe Print',cursive" font-size="16" fill="#5a5a5a">控制台</text>
+</svg>

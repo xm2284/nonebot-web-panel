@@ -1,0 +1,21 @@
+[project]
+name = "nonebot-plugin-web-panel"
+version = "0.1.0"
+description = "嵌入 NoneBot 进程的 Web 控制面板：状态、模型、按群概率与人设、QQ 登录中心"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "nonebot2>=2.4",
+    "nonebot-adapter-onebot>=2.4",
+    "fastapi",
+    "uvicorn",
+    "httpx",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["nonebot_plugin_web_panel*"]

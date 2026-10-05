@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="nonebot-web-panel mock">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="8" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="r2" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="p"/>
+      <feColorMatrix in="p" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    </filter>
+    <style><![CDATA[
+      .online { animation: blip 2s ease-in-out infinite; }
+      @keyframes blip { 0%,100%{opacity:1} 50%{opacity:.2} }
+      .knob { animation: slide 4.5s ease-in-out infinite; }
+      @keyframes slide { 0%,100%{transform:translateX(-16px)} 50%{transform:translateX(16px)} }
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 0%,50%{opacity:1} 50.01%,100%{opacity:0} }
+      .pctA { animation: pctA 4.5s ease-in-out infinite; }
+      .pctB { animation: pctB 4.5s ease-in-out infinite; }
+      @keyframes pctA { 0%,15%{opacity:1} 35%,65%{opacity:0} 85%,100%{opacity:1} }
+      @keyframes pctB { 0%,15%{opacity:0} 35%,65%{opacity:1} 85%,100%{opacity:0} }
+    ]]></style>
+  </defs>
+
+  <rect width="900" height="620" fill="#fbf7ee"/>
+  <rect width="900" height="620" filter="url(#paper)"/>
+
+  <!-- browser window -->
+  <g filter="url(#r)" fill="none" stroke="#2b2b2b" stroke-width="2.6" stroke-linejoin="round">
+    <rect x="40" y="30" width="820" height="560" rx="16" fill="#ffffff"/>
+    <line x1="40" y1="78" x2="860" y2="78"/>
+  </g>
+  <g filter="url(#r2)">
+    <circle cx="72" cy="54" r="5" fill="#2b2b2b"/>
+    <circle cx="92" cy="54" r="5" fill="#2b2b2b"/>
+    <circle cx="112" cy="54" r="5" fill="#2b2b2b"/>
+    <text x="150" y="60" font-family="'Comic Sans MS','Segoe Print',cursive" font-size="15" fill="#8a8a8a">127.0.0.1:6200</text>
+  </g>
+
+  <g font-family="'Comic Sans MS','Segoe Print',cursive" stroke="#2b2b2b">
+    <!-- card A -->
+    <g filter="url(#r2)">
+      <rect x="64" y="104" width="370" height="130" rx="12" fill="#ffffff" stroke-width="2.2"/>
+      <text x="86" y="136" font-size="18" fill="#1f1f1f" stroke="none">系统状态</text>
+      <circle class="online" cx="92" cy="165" r="5" fill="#2f7d32" stroke="none"/>
+      <text x="104" y="170" font-size="15" fill="#2f7d32" stroke="none">在线</text>
+      <text x="86" y="198" font-size="15" fill="#3a3a3a" stroke="none">所在群数　　90</text>
+      <text x="86" y="224" font-size="15" fill="#3a3a3a" stroke="none">当前模型　opus4.8</text>
+    </g>
+    <!-- card B -->
+    <g filter="url(#r2)">
+      <rect x="454" y="104" width="382" height="130" rx="12" fill="#ffffff" stroke-width="2.2"/>
+      <text x="476" y="136" font-size="18" fill="#1f1f1f" stroke="none">模型切换</text>
+      <rect x="476" y="150" width="340" height="26" rx="7" fill="#e5f0dd" stroke-width="1.8"/>
+      <text x="490" y="168" font-size="14" fill="#2f7d32" stroke="none">opus　✓ 使用中</text>
+      <text x="490" y="196" font-size="14" fill="#3a3a3a" stroke="none">kimi</text>
+      <text x="490" y="222" font-size="14" fill="#3a3a3a" stroke="none">vision</text>
+    </g>
+    <!-- card C -->
+    <g filter="url(#r2)">
+      <rect x="64" y="250" width="370" height="130" rx="12" fill="#ffffff" stroke-width="2.2"/>
+      <text x="86" y="282" font-size="18" fill="#1f1f1f" stroke="none">群聊参与概率</text>
+      <text class="pctA" x="86" y="314" font-size="14" fill="#3a3a3a" stroke="none">全局 40%</text>
+      <text class="pctB" x="86" y="314" font-size="14" fill="#3a3a3a" stroke="none">全局 60%</text>
+      <line x1="90" y1="336" x2="404" y2="336" stroke-width="3"/>
+      <circle class="knob" cx="216" cy="336" r="10" fill="#fde8cf" stroke-width="2.2"/>
+      <text x="86" y="366" font-size="14" fill="#3a3a3a" stroke="none">群 114514 → 100%</text>
+    </g>
+    <!-- card D -->
+    <g filter="url(#r2)">
+      <rect x="454" y="250" width="382" height="130" rx="12" fill="#ffffff" stroke-width="2.2"/>
+      <text x="476" y="282" font-size="18" fill="#1f1f1f" stroke="none">人设编辑</text>
+      <rect x="476" y="298" width="340" height="44" rx="8" fill="#f3efe4" stroke-width="1.8"/>
+      <line x1="490" y1="316" x2="760" y2="316" stroke-width="1.6"/>
+      <line x1="490" y1="330" x2="700" y2="330" stroke-width="1.6"/>
+      <line class="cursor" x1="706" y1="324" x2="706" y2="334" stroke-width="2"/>
+      <rect x="476" y="350" width="92" height="26" rx="8" fill="#dceaf6" stroke-width="2"/>
+      <text x="522" y="368" font-size="14" text-anchor="middle" fill="#1f1f1f" stroke="none">保存</text>
+    </g>
+    <!-- card E -->
+    <g filter="url(#r2)">
+      <rect x="64" y="396" width="772" height="150" rx="12" fill="#eef3fb" stroke-width="2.2"/>
+      <text x="86" y="428" font-size="18" fill="#1f1f1f" stroke="none">QQ 登录与安全中心</text>
+      <circle class="online" cx="92" cy="455" r="5" fill="#2f7d32" stroke="none"/>
+      <text x="104" y="460" font-size="15" fill="#2f7d32" stroke="none">账号在线正常</text>
+      <rect x="86" y="482" width="176" height="42" rx="12" fill="#e5f0dd" stroke-width="2.2"/>
+      <text x="174" y="509" font-size="15" text-anchor="middle" fill="#1f1f1f" stroke="none">打开登录页</text>
+      <rect x="282" y="482" width="176" height="42" rx="12" fill="#fde8cf" stroke-width="2.2"/>
+      <text x="370" y="509" font-size="15" text-anchor="middle" fill="#1f1f1f" stroke="none">刷新二维码</text>
+    </g>
+  </g>
+</svg>
